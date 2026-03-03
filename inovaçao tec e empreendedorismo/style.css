@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0b0c10 0%, #1a1f2e 100%);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #a0f0ff, #8a2be2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; }
+    to { text-shadow: 0 0 15px #8a2be2, 0 0 30px #8a2be2; }
+}
+
+section {
+    max-width: 800px;
+    width: 100%;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 255, 255, 0.1) inset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2), 0 0 0 2px rgba(0, 255, 255, 0.3) inset;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #a0f0ff;
+    border-left: 5px solid #00ffff;
+    padding-left: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #c0c0c0;
+    margin-bottom: 1.5rem;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section li {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 12px;
+    border-left: 3px solid #00ffff;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+section li:hover {
+    background: rgba(0, 255, 255, 0.15);
+    transform: translateX(8px);
+}
+
+section li strong {
+    color: #8a2be2;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+}
